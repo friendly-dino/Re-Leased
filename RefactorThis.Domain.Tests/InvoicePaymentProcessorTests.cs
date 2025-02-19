@@ -12,7 +12,7 @@ namespace RefactorThis.Domain.Tests
 		public void ProcessPayment_Should_ThrowException_When_NoInoiceFoundForPaymentReference( )
 		{
 			var repo = new InvoiceRepository( );
-
+			//test
 			Invoice invoice = null;
 			var paymentProcessor = new InvoiceService( repo );
 
