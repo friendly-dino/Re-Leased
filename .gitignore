@@ -3,3 +3,6 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+/RefactorThis.Domain/.vs
+/RefactorThis.Domain.Tests/.vs
+/.vs/RefactorThis

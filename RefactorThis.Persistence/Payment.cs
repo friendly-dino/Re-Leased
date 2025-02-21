@@ -1,3 +1,4 @@
+
 namespace RefactorThis.Persistence
 {
 	public class Payment
