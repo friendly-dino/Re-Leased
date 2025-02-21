@@ -1,7 +1,5 @@
 using System;
-using System.Linq;
 using RefactorThis.Persistence;
-using RefactorThis.Persistence.Enum;
 using RefactorThis.Persistence.Interface;
 
 namespace RefactorThis.Domain

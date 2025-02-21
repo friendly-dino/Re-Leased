@@ -1,5 +1,4 @@
 ﻿
-
 namespace RefactorThis.Persistence.Interface
 {
     public interface IInvoiceRepository
