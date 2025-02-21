@@ -26,7 +26,7 @@ namespace RefactorThis.Domain.Tests
 			{
 				failureMessage = e.Message;
 			}
-			Assert.AreEqual(ResponseMessage.noInvMatch, failureMessage );
+			Assert.AreEqual(ResponseMessage.NoInvMatch, failureMessage );
 		}
 		[Test]
 		public void ProcessPayment_Should_ReturnFailureMessage_When_NoPaymentNeeded( )
@@ -43,7 +43,7 @@ namespace RefactorThis.Domain.Tests
 			var paymentProcessor = new InvoiceService( repo, payProcessor);
 			var payment = new Payment( );
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.noPayNeed, result );
+			Assert.AreEqual(ResponseMessage.NoPayNeed, result );
 		}
 		[Test]
 		public void ProcessPayment_Should_ReturnFailureMessage_When_InvoiceAlreadyFullyPaid( )
@@ -66,7 +66,7 @@ namespace RefactorThis.Domain.Tests
 			var paymentProcessor = new InvoiceService( repo, payProcessor);
 			var payment = new Payment( );
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.invWasFullyPaid, result );
+			Assert.AreEqual(ResponseMessage.InvWasFullyPaid, result );
 		}
 		[Test]
 		public void ProcessPayment_Should_ReturnFailureMessage_When_PartialPaymentExistsAndAmountPaidExceedsAmountDue( )
@@ -92,7 +92,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 6
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.greaterPartialAmt, result );
+			Assert.AreEqual(ResponseMessage.GreaterPartialAmt, result );
 		}
 
 		[Test]
@@ -113,7 +113,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 6
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.greaterInvAmt, result );
+			Assert.AreEqual(ResponseMessage.GreaterInvAmt, result );
 		}
 
 		[Test]
@@ -140,7 +140,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 5
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.finPayRecv, result );
+			Assert.AreEqual(ResponseMessage.FinPayRecv, result );
 		}
 
 		[Test]
@@ -161,7 +161,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 10
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.invWasFullyPaid, result );
+			Assert.AreEqual(ResponseMessage.InvWasFullyPaid, result );
 		}
 
 		[Test]
@@ -188,7 +188,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 1
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.partialPayRecv, result );
+			Assert.AreEqual(ResponseMessage.PartialPayRecv, result );
 		}
 
 		[Test]
@@ -209,7 +209,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 1
 			};
 			var result = paymentProcessor.ProcessPayment( payment );
-			Assert.AreEqual(ResponseMessage.invPartiallyPaid, result );
+			Assert.AreEqual(ResponseMessage.InvPartiallyPaid, result );
 		}
 	}
 }
